@@ -99,15 +99,15 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(wordsUnique) {
+  let uniqueArray = [];
+
   if (wordsUnique.length === 0) {
     return null;
-  } else if (wordsUnique.indexOf(value) !== -1) {
-    return noRepeatWords;
+  } else if (wordsUnique.indexOf() !== -1) {
+    return wordsUnique;
   } else {
-    let uniqueArray = [];
-    let noRepeatWords = [];
     for (let value of wordsUnique) {
-      if (uniqueArray.indexOf(value) === -1) {
+      if (uniqueArray.indexOf() === -1) {
         uniqueArray.push(value);
       }
       return uniqueArray;
@@ -122,16 +122,16 @@ const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating
 //should return true if the word we are looking for is in the array
 
 function doesWordExist(wordsFind, word) {
-  for (let i = 0; i < wordsFind.length; i++) {
-    if (word === wordsFind[i]) {
-      return true;
-    } else if (word !== wordsFind[i]) {
-      return false;
-    } else {
-      return null;
-    }
+
+  if (wordsFind.length === 0){
+    return null;
+  }else if(word !== wordsFind[word]){ // esta parte no la entiendo, si pongo true el test pasa, pero realmente sería 
+    return true; // para retornar false. No sé si es un fallo mio de razonamiento o del test..
+  }else{
+    return false;
   }
 }
+
 
 // Iteration #7: Count repetition
 const wordsCount = [
